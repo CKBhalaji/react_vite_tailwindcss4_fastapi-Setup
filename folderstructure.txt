@@ -1,0 +1,21 @@
+fullstack-ai-starter/
+├── .gitignore
+├── package.json
+├── README.md
+├── frontend/
+│   ├── index.html
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── tailwind.config.js
+│   ├── vite.config.js
+│   └── src/
+│       ├── App.jsx
+│       ├── index.css
+│       └── main.jsx
+└── backend/
+    ├── .env.example
+    ├── main.py
+    ├── database.py
+    ├── models.py
+    ├── requirements.txt
+    └── venv/ (This will be created when you run `python -m venv venv`)
