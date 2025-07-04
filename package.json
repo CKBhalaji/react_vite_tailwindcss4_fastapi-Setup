@@ -1,0 +1,31 @@
+{
+  "name": "reactvite-tailwind4-fastapi",
+  "version": "0.0.1",
+  "description": "Full-stack web application starter kit with React, Vite, Tailwind CSS 4, and FastAPI backend.",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && npm run install-frontend && npm run install-backend",
+    "install-frontend": "echo 'Installing frontend dependencies...' && cd frontend && npm install",
+    "install-backend": "echo 'Setting up backend virtual environment and dependencies...' && cd backend && python -m venv venv && .\\venv\\Scripts\\pip install -r requirements.txt",
+    "dev-frontend": "echo 'Starting frontend development server...' && cd frontend && npm run dev",
+    "dev-backend": "echo 'Starting backend development server...' && .\\backend\\venv\\Scripts\\uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000",
+    "start-dev": "npm run dev-backend & npm run dev-frontend",
+    "build-frontend": "echo 'Building frontend for production...' && cd frontend && npm run build",
+    "lint-frontend": "echo 'Linting frontend...' && cd frontend && npm run lint",
+    "test-frontend": "echo 'No frontend tests configured yet.'",
+    "start-prod-backend": "echo 'Starting backend in production mode (ensure build-frontend ran).' && .\\backend\\venv\\Scripts\\uvicorn backend.main:app --host 0.0.0.0 --port 8000"
+  },
+  "keywords": [
+    "react",
+    "vite",
+    "tailwind",
+    "tailwindcss",
+    "fastapi",
+    "fullstack",
+    "starter",
+    "template",
+    "npm-package"
+  ],
+  "author": "bhalajick",
+  "license": "MIT"
+}

@@ -1,0 +1,63 @@
+# ========================
+# Git Ignore for Fullstack Project
+# (React/Vite/Tailwind + FastAPI/Python)
+# ========================
+
+# ----------------------------------------------------
+# 1. Node.js / Frontend (Vite/React/Tailwind)
+# ----------------------------------------------------
+/frontend/node_modules
+/frontend/dist        # Vite's build output
+/frontend/.env        # Local environment variables
+/frontend/.env.*local # More specific local environment variables
+/frontend/.vite       # Vite cache directory
+npm-debug.log* # npm debug logs
+yarn-debug.log* # Yarn debug logs (if used)
+pnpm-debug.log* # pnpm debug logs (if used)
+
+# ----------------------------------------------------
+# 2. Python / Backend (FastAPI)
+# ----------------------------------------------------
+/backend/venv         # Python virtual environment directory
+/backend/__pycache__/ # Python compiled bytecode
+/backend/*.pyc        # Python compiled bytecode files
+/backend/*.sqlite3    # SQLite database file (common for local dev)
+/backend/*.db         # Generic database files
+/backend/*.sqlite     # More SQLite variations
+/backend/.env         # Local environment variables
+/backend/.env.*local  # More specific local environment variables
+.pytest_cache/        # Pytest cache directory
+.mypy_cache/          # Mypy type checker cache
+
+# ----------------------------------------------------
+# 3. IDE / Editor Specific (VS Code)
+# ----------------------------------------------------
+.vscode/              # VS Code settings (general ignore for common user settings)
+.vscode/*.log
+.vscode/.history
+# Uncomment the line below if you want to ignore ALL .vscode content
+# .vscode/*
+# !.vscode/extensions.json # But keep extensions.json
+# !.vscode/launch.json    # And launch.json
+
+# ----------------------------------------------------
+# 4. Operating System / General Ignore
+# ----------------------------------------------------
+.DS_Store             # macOS system files
+Thumbs.db             # Windows thumbnail cache
+desktop.ini           # Windows specific files
+ehthumbs.db           # Windows specific files
+*.swp                 # Vim swap files
+*~                    # Emacs backup files
+*.bak                 # Backup files
+*.log                 # Generic log files
+*.tmp                 # Temporary files
+
+# ----------------------------------------------------
+# 5. Build/Distribution Files (for future reference if applicable)
+# ----------------------------------------------------
+/build/
+/dist/
+*.tgz
+*.zip
+*.tar.gz

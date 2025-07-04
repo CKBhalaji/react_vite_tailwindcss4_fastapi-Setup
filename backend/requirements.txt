@@ -1,0 +1,9 @@
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+SQLModel==0.0.19
+python-dotenv==1.0.1
+# psycopg2-binary==2.9.9 # For PostgreSQL. Install `psycopg2` if you also need client libraries.
+# Add other dependencies as needed
+# e.g., cryptography for JWT operations if not using jose
+# e.g., python-jose[cryptography] for JWT
+# e.g., passlib[bcrypt] for password hashing
