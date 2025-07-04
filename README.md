@@ -31,8 +31,8 @@ Make sure you have the following installed:
 
 1.  **Clone the repository (or extract the NPM package contents):**
     ```bash
-    git clone [https://github.com/your-username/reactvite-tailwind-fastapi.git](https://github.com/your-username/reactvite-tailwind-fastapi.git)
-    cd reactvite-tailwind-fastapi
+    git clone https://github.com/CKBhalaji/react_vite_tailwindcss4_fastapi-Setup
+    cd react_vite_tailwindcss4_fastapi-Setup
     ```
     (If this was an actual NPM package, you'd run `npm install reactvite-tailwind-fastapi` and then `npx reactvite-tailwind-fastapi init my-app` or similar if it were a CLI tool.)
 
@@ -79,3 +79,59 @@ You can run the frontend and backend simultaneously or individually.
 From the root directory of the project:
 ```bash
 npm run start-dev
+
+```
+
+This command will start the backend (FastAPI) and then the frontend (Vite) development servers concurrently. You'll see output from both.
+
+Frontend (Vite): Accessible at http://localhost:5173/ (or another port if 5173 is busy).
+
+Backend (FastAPI): Accessible at http://localhost:8000/
+
+Open http://localhost:8000/docs for FastAPI's interactive API documentation (Swagger UI).
+
+The frontend will proxy API calls from /api/* to http://localhost:8000/*.
+
+### Running Frontend Only (Development)
+From the root directory:
+
+```bash
+npm run dev-frontend
+```
+### Running Backend Only (Development)
+From the root directory:
+
+```bash
+npm run dev-backend
+```
+
+### Building for Production
+To create a production-ready build of the frontend:
+```bash
+npm run build-frontend
+```
+This will generate optimized static assets in the frontend/dist/ directory. You can then serve these static files using a web server or integrate them into your backend.
+
+### Project Structure
+fullstack-ai-starter/
+├── .gitignore
+├── package.json
+├── README.md
+├── frontend/
+│   ├── index.html
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── tailwind.config.js
+│   ├── vite.config.js
+│   └── src/
+│       ├── App.jsx
+│       ├── index.css
+│       └── main.jsx
+└── backend/
+    ├── .env.example
+    ├── main.py
+    ├── database.py
+    ├── models.py
+    ├── schemas.py
+    ├── requirements.txt
+    └── venv/ (This will be created when you run `python -m venv venv`)
